@@ -1,0 +1,19 @@
+#kicker{
+	background-size: 98%;
+}
+
+.kicker-inactive{
+	margin-right: 50px;
+}
+.leftContainer,.rightContainer,#completeContent{
+	height:771px;
+}
+
+.rightContainer button{
+	width:123px;
+}
+
+.pointsImage{
+	top:385px;
+	left:225px;
+}

@@ -1,0 +1,549 @@
+/*start of body styling*/
+body{
+
+	background: url(../images/acc_search_bg.png) repeat-y;
+	background-size: 100%;
+}
+/*end of body styling*/
+/* start of container styling*/
+.container
+{
+	width:100%;
+}
+/* end of container styling*/
+/*start of header styling*/
+.toptitle{
+	
+	background:url(../images/header.png) repeat-x;
+	color:#fcfcfc;
+	padding:8px 0px 0px 0px;
+	height:45px;
+	text-align:center;
+	font:20px bold Lucida Fax;
+	
+}
+.toptitle span{
+
+	padding:2px;
+	margin:0px 20px 0px 0px;
+}
+/*logout button*/
+.logoutBtn{
+
+	height:25px;
+	width:60px;
+	text-align:center;
+	border:1px solid #747474; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+	background-color: #747474; background-image: -webkit-gradient(linear, left top, left bottom, from(#747474), to(#363636));
+	background-image: -webkit-linear-gradient(top, #747474, #363636);
+	background-image: -moz-linear-gradient(top, #747474, #363636);
+	background-image: -ms-linear-gradient(top, #747474, #363636);
+	background-image: -o-linear-gradient(top, #747474, #363636);
+	background-image: linear-gradient(to bottom, #747474, #363636);
+}
+.logoutBtn:hover{
+
+	border:1px solid #a0a0a0;
+	background-color: #bababa; background-image: -webkit-gradient(linear, left top, left bottom, from(#bababa), to(#575757));
+	background-image: -webkit-linear-gradient(top, #bababa, #575757);
+	background-image: -moz-linear-gradient(top, #bababa, #575757);
+	background-image: -ms-linear-gradient(top, #bababa, #575757);
+	background-image: -o-linear-gradient(top, #bababa, #575757);
+	background-image: linear-gradient(to bottom, #bababa, #575757);
+}
+
+.logoutBtn:active{
+
+ 	border:1px solid #565252;
+	background-color: #565252; background-image: -webkit-gradient(linear, left top, left bottom, from(#565252), to(#565252));
+	background-image: -webkit-linear-gradient(top, #565252, #565252);
+	background-image: -moz-linear-gradient(top, #565252, #565252);
+	background-image: -ms-linear-gradient(top, #565252, #565252);
+	background-image: -o-linear-gradient(top, #565252, #565252);
+	background-image: linear-gradient(to bottom, #565252, #565252);
+}
+/*end of header styling*/
+/*start of dropdown menu styling*/
+#dropdownwidth
+{
+	width:48.85%;
+}
+/*search bar styling*/
+.search{
+
+	padding:20px 0px 0px 0px;
+	font-weight:bold;
+	font-size:20px;
+	color:#538ca2;
+	padding:0px 0px 0px 20px;
+}
+.searchbar
+{
+	padding:0px 0px 0px 20px;
+	font-size:15px;
+	height:32px;
+	width:37%;
+	border-radius:20px;
+}
+.btn{
+border-bottom-left-radius: 10px;
+border-top-left-radius: 10px;
+border-bottom-right-radius: 0px;
+border-top-right-radius: 0px;
+}
+.btn-group{
+
+	margin:0px 0px 0px 30px;
+}
+.btn-group button{
+
+	padding:7px;
+}
+.caret{
+	border-bottom-left-radius:10px;
+	margin:0px 5px 0px 0px;
+}
+.btn-group>.dropdown-toggle:not(:first-child) {
+border-bottom-right-radius: 10px;
+border-top-right-radius: 10px;
+
+}
+.btn-group.open .dropdown-toggle {
+-webkit-box-shadow: inset 0 3px 5px rgba(252, 248, 248, 0.125);
+box-shadow: inset 0 3px 5px rgba(242, 245, 239, 0.125);
+}
+/*go button styling*/
+.goBtn{
+
+	margin:0px 0px 0px 50px;
+	width:78px;
+	height:34px;
+	text-align:center;
+	border:1px solid #83d2f3; -webkit-border-radius: 8px; -moz-border-radius: 8px;border-radius: 8px;font-size:14px;font-family:arial, helvetica, sans-serif; padding: 5px 8px 5px 8px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+	background-color: #83d2f3; background-image: -webkit-gradient(linear, left top, left bottom, from(#83d2f3), to(#4babe5));
+ 	background-image: -webkit-linear-gradient(top, #83d2f3, #4babe5);
+ 	background-image: -moz-linear-gradient(top, #83d2f3, #4babe5);
+ 	background-image: -ms-linear-gradient(top, #83d2f3, #4babe5);
+ 	background-image: -o-linear-gradient(top, #83d2f3, #4babe5);
+ 	background-image: linear-gradient(to bottom, #83d2f3, #2CAFE3);
+}
+.goBtn:hover{
+
+	border:1px solid #1090c3;
+ 	background-color: #1ab0ec; background-image: -webkit-gradient(linear, left top, left bottom, from(#1ab0ec), to(#1a92c2));
+ 	background-image: -webkit-linear-gradient(top, #1ab0ec, #1a92c2);
+ 	background-image: -moz-linear-gradient(top, #1ab0ec, #1a92c2);
+ 	background-image: -ms-linear-gradient(top, #1ab0ec, #1a92c2);
+ 	background-image: -o-linear-gradient(top, #1ab0ec, #1a92c2);
+ 	background-image: linear-gradient(to bottom, #1ab0ec, #1a92c2);
+}
+.goBtn:active{
+
+ 	border:1px solid #1c5675;
+ 	background-color: #0F6078; background-image: -webkit-gradient(linear, left top, left bottom, from(#0F6078), to(#0F6078));
+ 	background-image: -webkit-linear-gradient(top, #0F6078, #0F6078);
+ 	background-image: -moz-linear-gradient(top, #0F6078, #0F6078);
+ 	background-image: -ms-linear-gradient(top, #0F6078, #0F6078);
+ 	background-image: -o-linear-gradient(top, #0F6078, #0F6078);
+ 	background-image: linear-gradient(to bottom, #0F6078, #0F6078);
+}
+/*reset button styling*/
+.resetBtn{
+
+	margin-left:20px;
+	width:78px;
+	height:34px;
+	text-align:center;
+	border:1px solid #757375; -webkit-border-radius: 8px; -moz-border-radius: 8px;border-radius: 8px;font-size:14px;font-family:arial, helvetica, sans-serif; padding: 5px 8px 5px 8px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ 	background-color: #a9b0b5; background-image: -webkit-gradient(linear, left top, left bottom, from(#a9b0b5), to(#757375));
+ 	background-image: -webkit-linear-gradient(top, #a9b0b5, #757375);
+ 	background-image: -moz-linear-gradient(top, #a9b0b5, #757375);
+ 	background-image: -ms-linear-gradient(top, #a9b0b5, #757375);
+ 	background-image: -o-linear-gradient(top, #a9b0b5, #757375);
+ 	background-image: linear-gradient(to bottom, #a9b0b5, #4A4E50);
+}
+.resetBtn:hover{
+
+ 	border:1px solid #A09D9D;
+ 	background-color: #A09D9D; background-image: -webkit-gradient(linear, left top, left bottom, from(#A09D9D), to(#A09D9D));
+ 	background-image: -webkit-linear-gradient(top, #A09D9D, #A09D9D);
+ 	background-image: -moz-linear-gradient(top, #A09D9D, #A09D9D);
+ 	background-image: -ms-linear-gradient(top, #A09D9D, #A09D9D);
+ 	background-image: -o-linear-gradient(top, #A09D9D, #A09D9D);
+ 	background-image: linear-gradient(to bottom, #A09D9D, #A09D9D);
+}
+.resetBtn:active{
+
+ 	border:1px solid #666363;
+ 	background-color: #666363; background-image: -webkit-gradient(linear, left top, left bottom, from(#666363), to(#666363));
+ 	background-image: -webkit-linear-gradient(top, #666363, #666363);
+ 	background-image: -moz-linear-gradient(top, #666363, #666363);
+ 	background-image: -ms-linear-gradient(top, #666363, #666363);
+ 	background-image: -o-linear-gradient(top, #666363, #666363);
+ 	background-image: linear-gradient(to bottom, #666363, #666363); 
+}
+/*search bar styling*/
+.searchtext{
+
+	padding:5px 0px 0px 20px;
+	color:white;
+	font-size:12px;
+}
+.clear
+{
+	clear:both;
+}
+/*accounts details menu styling*/
+#scrolling
+{
+	height: 345px;
+	overflow-y:scroll;
+	font-weight:bold;
+	margin-top:-19px;
+}
+.trCls{
+background:url(../images/account-bar-bg.jpg) no-repeat;
+background-size:200% 100%;
+
+} 
+.accountLevel
+{
+	width:10%;
+	text-align:center;
+}
+
+.accountLevel .juviderm, .accountLevel .natrelle, .accountLevel .latisse, .accountLevel .vivite
+{
+	font-weight: normal;
+	font-size: 0.625em;
+}
+.lineColor{
+
+	color:#305767;
+}
+.accountLevel .juviderm
+{
+	color:#c78ec0;		
+}
+.accountLevel .natrelle
+{
+	color:#FFFFCC;
+}
+.accountLevel .latisse
+{
+	color:#72cff3;
+}
+.accountLevel .vivite
+{
+	color:#b1b19a;	
+}
+.accountNameDetails
+{
+	
+	width:18%;
+	
+	text-align:left;
+}
+.accountNo, .points
+{
+	width:10%;
+	
+	text-align: center;
+}
+.territoryCode
+{
+	width:15%;
+	text-align: center;
+	
+}
+.accountType
+{
+	width:16%;
+	text-align: center;
+}
+
+
+#scrolling .accountLevel
+{
+	color:#89bed6;
+	text-align: center;
+}
+#scrolling .accountNameDetails{
+
+}
+#scrolling .points
+{
+	color:#fff;
+	padding-right:55px;
+	
+}
+#scrolling .accountName
+{
+	color:#89bed6;
+}
+#scrolling .accountCode
+{
+	color:#b1b19a;
+	font-weight: bold;
+	
+}
+#scrolling .accountNo 
+{
+	color:#89bed6;	
+	padding-right:50px;
+}
+
+
+#scrolling .accountType
+{
+color:#89bed6;	
+	padding-left:7%;
+	text-align:center;
+	
+}
+#scrolling .territoryCode
+{
+	width:11%;
+	color:#89bed6;
+	
+	
+}
+
+
+
+
+.table{
+
+	margin-top:-5px; 
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+
+	padding: 8px;
+	line-height: 1.42857143;
+	border-bottom:2px solid #175664;
+}
+
+#tableHead
+{
+	background: url("../images/account-search-top-bg.jpg") no-repeat;
+	background-size:100%;
+	color:#1B679E;
+}
+#tableHead th{
+padding-top:-40px;
+}
+
+.small {
+	margin:10px;
+    font-size:12px;
+	color:white;
+}
+.pull-middle
+{
+	
+	margin-left:350px;
+}
+.contentDiv
+{
+	margin-top:20px;
+	background:url(../images/footerbg.png) repeat-x;
+	background-size:100%;
+	height:30px;
+	color:#528ca2;
+	padding:5px;
+	font-weight: bold;
+}
+.cursorPointer
+{
+	cursor:pointer;
+}
+
+
+/*for first drop down list*/
+.liststyle
+{
+	color:white;
+	font-style:Arial;	
+	margin:0;	
+	padding:10px;
+}
+
+/*list of accounts number*/
+#listnumbers{
+
+	font-size:20px;
+}
+#frontdisplay{
+
+	width:190px;
+}
+/*error message*/
+.label-warning {
+  background-color: rgba(0,0,0,0);
+  color:red;
+  font-size: 17px;
+  display:inline;
+}
+.searchtext p{
+	display: inline;
+}
+#errormessage{
+
+	color:#01293b;
+	margin:0px 0px 0px 10px;
+	font-style:Arial;
+	font-size:16px;
+	
+}
+
+/*dropdowm menu css*/
+.maindropdown{
+
+	color:white;
+	background-color:#000000;
+	margin:-28px 0px 0px -55px; 
+	position:absolute;
+	left:20%;
+	z-index:5px;
+	font-weight:bold;
+	width:16.26%;
+	border-radius:5px;
+	
+}
+.maindropdown ul li{
+	list-style:none;
+	padding:1px 0px 1px 0px;
+	
+}
+
+.sorteddropdown{
+
+	width:100%;
+	color:#3276b1;
+	padding:0px 0px 0px 2px;
+	font-weight:none;
+}
+thead{
+
+	color:#50c6f6;
+}
+
+/*arrow styling*/
+.caret1{
+
+	color:#3276b1;
+	float:right;
+	margin:10px 7px 0px 0px;
+}
+/*radio button styling*/
+.dropdowncolor ul li label input[type=radio]{
+  opacity: 0;
+  z-index: 9999;
+}
+/* default radio button style: unchecked */
+.overlay {
+float:left;  /* or whatever length you need here */
+height: 1.85em;
+width: 3em;
+background:url('../images/radio_btn.png') no-repeat;
+border-radius: 100%;
+background-position:0px 0px;
+margin-left:-4em;
+}
+/* changed style when checked */
+.dropdowncolor ul li label input[ng-checked=true] + .overlay{
+background: url('../images/radio_btn.png') no-repeat;
+background-position:0px -25px;
+}
+.dropdowncolor ul li label input[type=radio]:checked + .overlay{
+background:url('../images/radio_btn.png') no-repeat;
+background-position:0px -25px;
+}
+
+/* changed style when checked */
+/*  input[type=radio]:checked + .overlay {
+
+	background:white url('../images/checkboxImg5.png') no-repeat;
+	left: -1em; 
+	height: 1.4em;
+	width: 1.4em;
+	border-radius: 100%;
+}  */
+/* for sort clickable div */
+
+.sort{
+
+	color:#558aa1;
+	margin:0px 0px 0px 5px;
+	padding-left:5px;
+}
+
+/*ascending and descending*/
+.dropdowncolor button{
+
+	float:left;
+	clear:both;
+	margin:0px 0px 10px 10px;
+}
+
+/*sort by column*/
+.sortcolor{
+
+	background-color:#012233;
+	color:white;
+	list-style:none;
+	margin:0px 10px 0px 10px;
+	padding-right:10px;
+}
+ul .sortcolor{
+
+	float:left;
+	padding-right:10px;
+}
+
+/*submit button*/
+.submitBtn{
+
+	margin:10px 0px 10px 10px;
+	border:1px solid #15aeec; -webkit-border-radius: 5px; -moz-border-radius: 5px;border-radius: 5px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 5px 8px 5px 8px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+	background-color: #49c0f0; background-image: -webkit-gradient(linear, left top, left bottom, from(#49c0f0), to(#2CAFE3));
+	background-image: -webkit-linear-gradient(top, #49c0f0, #2CAFE3);
+	background-image: -moz-linear-gradient(top, #49c0f0, #2CAFE3);
+	background-image: -ms-linear-gradient(top, #49c0f0, #2CAFE3);
+	background-image: -o-linear-gradient(top, #49c0f0, #2CAFE3);
+	background-image: linear-gradient(to bottom, #49c0f0, #2CAFE3);
+}
+.submitBtn:hover{
+
+	border:1px solid #1090c3;
+	background-color: #1ab0ec; background-image: -webkit-gradient(linear, left top, left bottom, from(#1ab0ec), to(#1a92c2));
+	background-image: -webkit-linear-gradient(top, #1ab0ec, #1a92c2);
+	background-image: -moz-linear-gradient(top, #1ab0ec, #1a92c2);
+	background-image: -ms-linear-gradient(top, #1ab0ec, #1a92c2);
+	background-image: -o-linear-gradient(top, #1ab0ec, #1a92c2);
+	background-image: linear-gradient(to bottom, #1ab0ec, #1a92c2);
+}
+.submitBtn:active{
+	border:1px solid #1090c3;
+	background-color: black; background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(#1a92c2));
+	background-image: -webkit-linear-gradient(top, black, #1a92c2);
+	background-image: -moz-linear-gradient(top, black, #1a92c2);
+	background-image: -ms-linear-gradient(top, black, #1a92c2);
+	background-image: -o-linear-gradient(top, black, #1a92c2);
+	background-image: linear-gradient(to bottom, black, #1a92c2);
+}
+.loadBtn{
+	margin:0;
+	width:9%;
+	height:25px;
+	text-align:center;
+	border:1px solid #124C64; -webkit-border-radius: 80px; -moz-border-radius: 8px;border-radius: 8px;font-size:14px;font-family:arial, helvetica, sans-serif; padding: 2px 8px 6px 8px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+	background-color: #124C64; background-image: -webkit-gradient(linear, left top, left bottom, from(#124C64), to(#071D25));
+ 	background-image: -webkit-linear-gradient(top, #124C64, #071D25);
+ 	background-image: -moz-linear-gradient(top, #124C64, #071D25);
+ 	background-image: -ms-linear-gradient(top, #124C64, #071D25);
+ 	background-image: -o-linear-gradient(top, #124C64, #071D25);
+ 	background-image: linear-gradient(to bottom, #124C64, #071D25);
+	font-size:12px;
+}
+

@@ -1,0 +1,96 @@
+<div >
+	<!-- Header   -->
+    <div class="toptitle clear">
+        ALLERGAN PARTNER PRIVILEGES
+	    <span id="id_0" class="logoutBtn pull-left" style="cursor:pointer;" ng-click="previousPage()">Back</span>  <!-- Propogates to next page -->
+	    <span id="id_0" class="logoutBtn pull-right" style="cursor:pointer;" ng-click="logOut()">Log Out</span>   <!-- Logs out to main page -->
+    </div>
+	<!--searchbox-->
+	<div id="completeContent">
+
+		<!-- Left Container -->
+		<div class="leftContainer pull-left">
+			<!-- Pyramidal and Kicker analysis -->
+			<div class="leftTopContainer">
+				<!-- Pyramidal analysis -->
+				<div class="pointsAnalysis pull-left">					
+					<div class="accountTypeDisplay">
+						<img src="images/sold-to.png" ng-show="soldToImageDisplay()"/>  <!-- displays sold-To image if account type conains it -->
+						<img src="images/ship-to.png" ng-show="shipToImageDisplay()"/>   <!-- displays ship-To image if account type conains it -->
+						<span>{{details.accountName.name}}</span> <!-- displays account name-->
+					</div>
+					<img src="images/sold-to-white.png" class="pointsImage">
+					<canvas  id="mypyramid"  width="400" height="400"></canvas>  <!-- Canvas for showing user his points status -->	
+				</div>
+				<!-- Kicker -->
+				<div class="kicker pull-left">
+					
+					<div class="companyHeader">
+						<div class="print"><button class="btn pull-right">Print</button></div>
+						<div class="companyLogo">
+							<h4>Dermetology Partners, Inc</h4>
+							<h5>CURRENT LEVEL : {{details.accountLevel.name}}</h5>  <!-- Displays Current level -->
+						</div>
+					</div>
+					<div id="kicker">		
+						<div class="kickertypes">
+							<div ng-repeat="info in details.accountName.productInformation" class="{{info.productName}}">
+								<label>{{info.productName}}</label>
+								<div class="pull-right kicker-inactive">
+									<span ng-repeat="i in [1,2,3,4,5,6,7,8,9,10]" >
+										<img ng-if="settingImages($index,$parent.$index)" ng-src="images/{{path}}" alt="cube"/> 
+									</span>
+								</div>
+							</div>
+						</div> 
+					</div>
+
+					<!-- Outer loop gives out a div containing complete product information of a single product everytime.
+					Inner loop checks for the kicker points od each product and gives corresponding image path using ng-if --> 
+
+				</div>
+			</div>
+			
+			<!-- Tier Container -->
+			<div class="leftBottomContainer">
+				<!-- Static Container -->
+				<div class="bottomStaticTier pull-left">
+					<canvas id="botoxTier" height="250" width="180" ></canvas> <!-- Canvas for static Botox Tier -->
+				</div>
+				<!-- Dynamic Container -->
+				<div class="bottomDynamicTier pull-left">  <!-- Contains various canvas for all other tiers -->
+					<canvas id="juvedermTier" height="250" width="180"></canvas>
+					<canvas id="natrellaTier" height="250" width="180" ></canvas>
+					<canvas id="viveteTier" height="250" width="180" ></canvas>
+					<canvas id="latiseeTier" height="250" width="180" ></canvas>
+				</div>
+			</div>
+		</div>
+
+		<!-- Right Container -->
+		<div class="rightContainer pull-right">
+			
+			<div class="btns">
+				<button ng-click="scrollToContent($index,$event)" ng-repeat="btn in ['BOTOX','JUVERDEM','LATISEE','NATRELLE','VIVITE']">{{btn}}</button>  <!-- Generates five different buttons for scroll to -->
+	    	</div>
+	    	<div id="tierContent">
+	    		<div class="botoxContent">
+	        		<h4><strong><i>Botox</i></strong></h4> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	    		</div>
+	    		<div class="juverdemContent">
+	        		<h4><strong><i>Juverdem</i></strong></h4> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.
+	    		</div>
+	    		<div class="latiseeContent">
+	        		<h4><strong><i>Latisee</i></strong></h4> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.
+	    		</div>
+	    		<div class="natrelleContent">
+	        		<h4><strong><i>Natrelle</i></strong></h4> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.
+	    		</div>
+	    		<div class="viviteContent">
+	        		<h4><strong><i>Vivite</i></strong></h4> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Aldus PageMaker including versions of Lorem Ipsum.
+				</div>
+			</div>
+	    </div>
+	</div>
+
+</div>

@@ -1,0 +1,57 @@
+#completeContent{
+	background: url('../../images/pyramid-bg.jpg') repeat-y;
+	background-size: 100%;
+	height:820px;
+}
+#kicker
+{
+background:url('../../images/kicker-bg.png') no-repeat;
+background-size:430px;
+width:430px;
+height:250px;
+color:#4e849c;
+}
+.kicker-inactive
+{
+padding-top:10px;
+margin-right:40px;
+}
+label
+{
+margin-left:20px;
+padding-top:10px;
+}
+.kickertypes
+{
+padding-top:25px;
+}
+.kicker-inactive img
+{
+padding-left:5px;
+}
+.companyHeader{
+	background: url('../../images/horizontal-line.png') no-repeat bottom center;
+	background-size:90% auto;
+	margin-bottom: 15px;
+}
+
+.companyHeader h4{
+	color : #4e849c;
+	font-weight: bold;
+	font-size: 25px;
+}
+.companyHeader h5{
+	color: #b2cfdb;
+	font-weight: bold;
+}
+
+.kicker p{
+	padding:10px;
+	text-align: left;
+	color: #9dbcc9;
+}
+.companyLogo{
+	background: url('../../images/company_logo.png') no-repeat left center;
+	padding-left: 90px;
+	padding-bottom: 5px;
+}

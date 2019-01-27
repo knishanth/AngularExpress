@@ -1,0 +1,124 @@
+<div ng-click='hideDropDown()'>   <!-- This ng-click is used to hide sorting options on clicking outside Drop Down menu -->
+   
+   <!-- Header   -->
+    
+	<div class="toptitle clear" >
+            ALLERGAN PARTNER PRIVILEGES
+	<span id="id_0" class="logoutBtn pull-right" style="cursor:pointer;" ng-click="logOut()">Log Out</span>  <!-- Funtion to logOut  -->
+     </div>
+		
+		<!--searchbox-->
+        
+		<div class="search">
+            <p>Account Search</p>
+            <input type="search" class="searchbar" ng-model='search' placeholder="Enter any account criteria to search" ng-click='hideError()'>   <!-- ng-model is used for binding the entered text with the accounts to be filtered and ng-click for hiding errormessage -->
+			<div class="btn-group" ng-class="{open: open}" >
+               
+			   <!--dropdown selected level-->
+              
+			  <button  class="btn dropdown-toggle " ng-click="levels();open=!open" id='frontdisplay' data-toggle="dropdown">
+                    Silver Account and Above                    
+              </button>
+              <button class="btn dropdown-toggle" ng-click="levels();open=!open" ><span class="caret" ></span>
+              </button>
+
+              <!-- For the above buttons ng-click is used to DYNAMICALLY retrieving unique levels displaying after new set of account details are loaded into records holder and toggle drop down -->
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu" id='dropdownwidth'>
+                    <li ng-repeat="company in levelList"><a ng-click="display($index);setSelectedaccount($index)">{{company.name}}</a>
+                    </li>                                                       
+                </ul>
+              <!-- The clicked account level is taken into search criterion and is displayed to the user --> 
+				
+                <!--go and reset button-->
+                
+				<span id="id_0" class="goBtn" style="cursor:pointer;" ng-click='goButton()'>Go</span>    <!-- Based on the search criterion  searching is done -->
+                <span id="id_0" class="resetBtn" style="cursor:pointer;" ng-click='resetButton()' data-ng-click="init();resetButton()">Reset</span>   <!-- All the search criterion is reset and initial set of data is displayed -->
+            </div>
+			
+				<!--error message-->
+			
+		</div>
+  
+        <div class="searchtext"><p><i>Account Name, Account Number,City,State,Zip Code,Territory Code</i></p><span class="label label-warning" id="error message">{{error}}</span></div>  <!-- Displays error message if no text is enteredinto search box -->
+		
+		<!--table for records-->  
+        
+		<div ng-init="init()">  <!-- To load initial set of records into display -->
+			<div id='tableHead'>
+					<h4 class="liststyle">List of Accounts (<span id="listnumbers">{{filtered.length}}</span>)</h4>
+                			<!-- Filtered.length displays number of accounts displayed after filtering, helps in keeping track on number of records filtered -->
+
+						<!--dropdown for sorting-->
+					
+					<div class="maindropdown" ng-click="$event.stopPropagation();">  <!-- Stops sort options from collapsing if clicked on them -->
+						<div class="sorteddropdown"  ng-click="isCollapsed = !isCollapsed">SORT<span class="caret caret1"></span>
+						</div>   <!-- Opens and closes sort options if clicked here -->
+						<div class="dropdowncolor" collapse="isCollapsed">  <!-- collapse helps in closing sort options initially --> 
+							
+							<ul>
+								<li><label><input type="radio" ng-model="sortingorder" name="attributes[23]"  ng-click='checking()' value="false"><span class="overlay"></span>Ascending</label></li> 
+								<li><label><input type="radio" ng-model="sortingorder" name="attributes[23]"  ng-click='checking()' ng-checked={{checkreverse}} value="true"><span class="overlay"></span>Decending</label></li> 
+							</ul>
+							<!-- In above <ul> tag we take either ascending or decendinng option which is to be applied to accounts --> 
+
+							<ul class="sortcolor">
+								<li><label><input type="radio" ng-model="sortby" name="attributes[24]"  ng-click='checking()' value="accountName.name" ><span class="overlay"></span>AccountName</label></li>
+								<li><label><input type="radio" ng-model="sortby" name="attributes[24]"  ng-click='checking()' value="acountNo"><span class="overlay"></span>AcountNo</label></li>
+								<li><label><input type="radio" ng-model="sortby" name="attributes[24]"  ng-click='checking()' ng-checked={{check}} value="points"><span class="overlay"></span>Points</label></li>
+								<li><label><input type="radio" ng-model="sortby" name="attributes[24]"  ng-click='checking()' value="territoryCode.code[0]"><span class="overlay"></span>TerritoryCode</label></li>
+								<li><label><input type="radio" ng-model="sortby" name="attributes[24]"  ng-click='checking()' value="accountType"><span class="overlay"></span>AccountType</label></li>
+							</ul>
+							<!-- In above <ul> tag we take prediate or the criterion which sorts records either in ascending or decending order --> 
+							
+
+							<span id="id_0" ng-click="sortSubmit()" class="btn3 submitBtn " style="cursor:pointer;">SUBMIT</span>  
+						</div>  <!-- sort options closes on clicking submit -->
+							<!--end of sorting dropdown-->
+					</div>
+				<table class=" table tableStyles tableHead">
+					
+					<thead>		<!-- Table headings-->		
+						<th class="accountLevel">Level/Tier<br><span class="juviderm"><b>J</b> </span><span class='lineColor'>|</span><span class="natrelle"><b> N </b></span><span class='lineColor'>|</span><span class="latisse"><b> L </b> </span><span class='lineColor'>|</span><span class="vivite"> <b>V</b></span></th>
+						<th class="accountNameDetails">Account Name and Location</th>
+						<th class="accountNo">Account #</th>
+						<th class="points">Points</th>
+						<th class="territoryCode">Territory code</th>
+						<th class="accountType">Sold To/Ship To</th>
+					</thead>
+				</table>
+			</div>
+
+			<div id="scrolling">
+                <table class=" table tableStyles">
+                    <tbody>
+                        <tr ng-repeat="account in filtered=(getdata|levelFilter:selectedLevelAfter|orderBy:predicate:reverse|filter:searchtext)||(accountsList.accounts|orderBy:predicate:reverse)" >   <!-- various search criterion entered by user are taken into consideration and a custom filter is used to filter the accounts accordingly.... for custom filter refer allergan.js -->
+                            <td class="accountLevel">{{account.accountLevel.name}}<br><span class="juviderm"> {{account.accountLevel.j}} </span>|<span class="natrelle"> {{account.accountLevel.n}} </span>|<span class="latisse"> {{account.accountLevel.l}}  </span>|<span class="vivite"> {{account.accountLevel.v}} </span></td>
+                            <td class="accountNameDetails"><span class="accountName">{{account.accountName.name}}</span><br><span class="accountCode">{{account.accountName.state}};{{account.accountName.city}};{{account.accountName.zipCode}}</span></td>
+                            <td class="accountNo">{{account.acountNo}}</td>
+                            <td class="points">{{account.points}}</td>
+                            <td class="territoryCode">
+							<span>{{account.territoryCode.code[0]}}</span>,<span>{{account.territoryCode.code[1]}}</span>,<br>
+							<span>{{account.territoryCode.code[2]}}</span>,<span>{{account.territoryCode.code[3]}}</span>.</td>
+                            <td class="accountType"><span>{{account.accountType}}</span><span class="pull-right" ng-click="nextPage($index)" ><img style="cursor:pointer;" src="images/right_arrow.png"/></span></td>              
+                        </tr>
+                        <!-- On click current account is transfered to the next page for detailed analysis -->
+						
+                    </tbody>
+                </table> 
+				<div class="label-warning search_result" ng-show="!filtered.length">No Search results found</div>    <!-- displayed if there are no accounts found for search criterion -->
+				<!--end of accounts display-->
+			
+			</div>
+				
+				<!--start of loading-->
+            
+			<div class="contentDiv"> 
+                <span class="pull-middle cursorPointer" ng-show="hasMore()" ng-click="showMore();levels()"><button class='loadBtn'>LOAD MORE</button></span>   <!-- Ajax call is made each time we click on this button and a maximum of 50 records are fetched -->
+                <span class="small pull-left">{{status_bar}}</span>   <!-- Fetched records count is shown as a status -->
+            </div>
+			
+			<!--end of loading-->
+            
+			<div class="clearfix"></div>
+		</div>
+</div>

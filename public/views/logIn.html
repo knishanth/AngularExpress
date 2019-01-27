@@ -1,0 +1,54 @@
+<!-- LogIn Page VIew -->
+
+<div>
+	<!--Start of container-->
+	<div class='container'>
+		<!--Start of left division-->
+		<div id='leftDiv' class='pull-left clear'>
+			<img src="images/app_logo.png" />
+		</div>
+		<!--End of left division-->
+		
+		<!--Start of right division-->
+		<div id='rightDiv' class='pull-left '>
+			<h1>TAKE YOUR PRACTISE TO THE NEXT LEVEL</h1>
+		
+			<!--Start of Form-->
+			<div id='forms' class='pull-left clear'>
+			   <form name="myForm" novalidate >
+				<h3>Sign in</h3>
+				<div id='input'class='pull-left form clear' >
+
+					<!-- In this division error message is hidden on clicking on any input tag using ng-click, Client side validations are don using ng-pattern and ng-enter is used to perform sign in operations on hitting oon enter -->
+
+					<div id='field1 form-group'>
+					    <label class="col-xs-3 control-label">Username</label>
+						<input name="userEmail" class=' form-control abc' type='text' placeholder='allerganuser@allergan.com' ng-click="hideError()" ng-model="userName" ng-maxlength="40" ng-pattern="/[a-zA-Z0-9._-]{6}@allergan.com/" required />
+					</div>
+					<hr>
+					<div id='field2 form-group'><label class="col-xs-3 control-label" >Password</label>
+						<input type="password" class='form-control' id="password" name="password" ng-click="hideError()"  ng-model="pass" ng-enter="onEnter()" ng-minlength="8" ng-maxlength="20" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required  />			
+					</div>
+					
+				</div>
+				
+				<span class="label label-warning" ng-show="error" >{{error}}</span>   <!-- Used for displaying error messages -->
+				<button id="id_0" class="pull-left button_example4 clear" style="width:20%;" ng-click="signIn()" ng-enter="myFunction()" >Sign in</button>  <!-- Server side validations take place on clicking this button -->
+				</form>	
+				<p class='clear'> <i>If you have forgotten your password or any other enquiries please call the Allegran Helpdesk at XXX-XXX-XXX</i>
+				</p>
+			</div>
+			<!--End of Form-->
+
+		</div>
+		<!--End of right division-->
+		
+	</div>
+	<!--end of container-->
+
+	<!--Start of footer-->
+	<div id='footer' class='clear'>
+		<img src="images/allergan_logo.png" class='pull-right clear'/>
+	</div>
+	<!--End of footer-->
+</div>

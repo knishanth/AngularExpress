@@ -1,0 +1,39 @@
+<!DOCTYPE html >
+<html ng-app="allergan" >
+	<head>
+		<title>Allergan Partner Privileges</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/logIn.css"/>
+		<link rel="stylesheet" type="text/css" href="css/accountsDisplay.css"/>
+		<link rel="stylesheet" type="text/css" href="css/accountDetails/accountDetails.css"/>
+		<link rel="stylesheet" type="text/css" href="css/accountDetails/kicker.css"/>
+		<!--[if IE]>
+			<link rel="stylesheet" type="text/css" href="css/ieHack.css" />
+		<![endif]-->
+		
+
+	</head>
+	<body ng-controller="allerganController" ng-model="loggedIn"> 
+	<!--  Main Comtroller for whole Web Page -->
+		<div class="overlayContainer" >
+			<div class="imageLoadingContainer">
+				<img src="images/loadingIcon.gif" alt="loading image"/>
+			</div>
+		</div> 
+		<div ng-view></div>
+
+		<!-- Library Files -->
+		<script type="text/javascript" src="js/lib/angular.js"></script>
+		<script type="text/javascript" src="js/lib/angular-route.js"></script>
+		<script type="text/javascript" src="js/lib/ui-bootstrap-0.10.0.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery-1.4.2.js"></script>
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="js/allergan.js"></script>    <!-- Module -->
+		<script type="text/javascript" src="js/controllers/logIn.js"></script>  <!-- Log In Page controller -  route #/ -->
+		<script type="text/javascript" src="js/controllers/accountDisplay.js"></script>  <!-- Accounts filtering controller -  route #/recordsHolder -->
+		<script type="text/javascript" src="js/controllers/detailAnalysis.js"></script>  <!-- Details controller -  route #/accountDetails -->
+	</body>
+</html>

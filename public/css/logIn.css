@@ -1,0 +1,161 @@
+/*CSS Reset*/
+
+*{
+	margin:0 auto;
+	padding:0 auto;
+}
+/*Start of body*/
+
+body{
+	background: url(../images/acc_search_bg.png) no-repeat;
+	background-size: 100%;
+}
+.clear{
+	clear:both;
+}
+/*End of body*/
+/*Loading gif image*/
+.overlayContainer{
+background: rgba(0, 0, 0, 0.7);
+position: fixed;
+z-index: 6000;
+top: 0;
+left: 0;
+width: 100%;
+height: 950px;}
+
+
+.imageLoadingContainer {
+display: block;
+position: absolute;
+top: 25%;
+left: 49%;
+width: 20px;
+height: 30px;
+}
+
+/*End of Loading gif image stylings*/
+
+/*Start of left division*/
+#leftDiv{	
+	 margin-left: 0px;
+ 	width:30%;
+}
+#leftDiv img{
+	padding: 45px 0px 0px 32px ;
+	width:319px;
+	height:158px;
+}
+/*End of left division*/
+
+/*Start of right division*/
+#rightDiv{
+	margin: 58px 50px 0px 60px;
+	width:55%;	 
+	height:480px;
+}
+#rightDiv h1{
+	width:65%;
+	font-family:"Times New Roman",Georgia,Serif;
+  	font-size: 36px;
+	color:white;
+}
+
+/*Start of Form*/
+#forms{
+	width: 550px;
+	height: 350px;	
+}
+#forms h3{
+	font-weight: bold;
+	font-size: 18px;
+	font-family: Arial;
+	color:#538ca0;
+}
+#forms p{
+	padding-top: 40px;
+	color:#c9cace;
+}
+#input{
+	background-color: white;
+	margin-top: 25px;
+	border-radius: 10px;
+	width:430px;
+	height: 140px;
+}
+#field1 label{
+	padding-top: 200px;
+}
+#field1 input{
+	margin-top:10px;
+	margin-bottom: -10px;
+	background-color:#f0f0f0;
+}
+#field2 input{
+	margin-top: -14px;
+	background-color:#f0f0f0;
+}
+.form-control{
+	width:220px;
+	margin-top:15px;
+}
+.button_example4{
+	width:80px;
+	border:1px solid #25729a; -webkit-border-radius: 5px; -moz-border-radius: 5px;border-radius: 5px;font-size:12px;
+	text-align: center;
+	margin:40px 0px 0px 0px;
+	font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; 
+	display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ 	background-color: #3093c7; background-image: -webkit-gradient(linear, left top, left bottom, from(#3093c7), to(#1c5a85));
+ 	background-image: -webkit-linear-gradient(top, #3093c7, #1c5a85);
+ 	background-image: -moz-linear-gradient(top, #3093c7, #1c5a85);
+ 	background-image: -ms-linear-gradient(top, #3093c7, #1c5a85);
+ 	background-image: -o-linear-gradient(top, #3093c7, #1c5a85);
+ 	background-image: linear-gradient(to bottom, #3093c7, #1c5a85); 
+}
+.button_example4:hover{
+ 	border:1px solid #1c5675;
+ 	background-color: #26759e; background-image: -webkit-gradient(linear, left top, left bottom, from(#26759e), to(#133d5b));
+ 	background-image: -webkit-linear-gradient(top, #26759e, #133d5b);
+ 	background-image: -moz-linear-gradient(top, #26759e, #133d5b);
+ 	background-image: -ms-linear-gradient(top, #26759e, #133d5b);
+ 	background-image: -o-linear-gradient(top, #26759e, #133d5b);
+ 	background-image: linear-gradient(to bottom, #26759e, #133d5b);
+}
+.button_example4:active{
+	border:1px solid #1c5675;
+ 	background-color: #002336; background-image: -webkit-gradient(linear, left top, left bottom, from(#002336), to(#002336));
+ 	background-image: -webkit-linear-gradient(top, #002336, #002336);
+ 	background-image: -moz-linear-gradient(top, #002336, #002336);
+ 	background-image: -ms-linear-gradient(top, #002336, #002336);
+ 	background-image: -o-linear-gradient(top, #002336, #002336);
+ 	background-image: linear-gradient(to bottom, #002336, #002336);
+ }
+ form .ng-invalid.ng-dirty { background-color: #F78181; }
+ form .ng-valid.ng-dirty { background-color: #9FF781; }
+
+a,
+a:hover{
+ 	color:#fff;
+ 	text-decoration: none;
+ }
+/*End of Form*/
+
+/*End of right division*/
+
+/*Start of footer*/
+#footer{
+	
+	left:0;
+	right:0;
+	bottom:0;
+	background: url(../images/footerbg.jpg) no-repeat ;
+	background-size: 100%;
+	height: 115px;	
+	margin-top:5px;
+}
+#footer img{
+	width:275px;
+	margin: 70px 100px 0px 0px;
+}
+/*End of footer*/
